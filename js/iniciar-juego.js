@@ -1,7 +1,8 @@
 function iniciar() {
     movimientos = 0;
-    reparteTarjetas(niveles[nivelActual].tarjetas);
     document.querySelector('#mov').innerText = '00';
+
+    reparteTarjetas(niveles[nivelActual].tarjetas);
     maxContador();
 
     //document.querySelector('#feedback').classList.remove('visible');
@@ -12,19 +13,17 @@ function iniciar() {
     document.querySelector('#gameOver').classList.remove('visible');
     document.querySelector('#subeNivel').classList.remove('visible');
 
-    //document.getElementById("mesa").addEventListener("click", reparteTarjetas);
-
     document.querySelectorAll(".tarjeta").forEach(function (elemento) {
         elemento.addEventListener('click', descubrir);
     });
 
     if (!modoRelax) {
-        iniciaCronometro();
+        iniciaCronometro(niveles[nivelActual].time);
+        document.querySelector('#cronometro').classList.remove('cronometro-oculto');
     } else {
+        iniciaCronometro(0, true)
         document.querySelector('#cronometro').classList.add('cronometro-oculto');
     }
-    //actualizaContador();
-    //iniciarCronometro();
 }
 
 function reiniciar() {
@@ -33,12 +32,11 @@ function reiniciar() {
     iniciar();
 }
 
-
 function iniciaJuegoNormal() {
     modoRelax = false;
     document.querySelector('#bienvenida').classList.remove('visible');
+    //document.querySelector('#control-nivel').classList.add('control-oculto');
     iniciar();
-    document.querySelector('.control-nivel').classList.add('control-oculto');
 }
 
 function iniciaJuegoRelax() {
@@ -46,11 +44,3 @@ function iniciaJuegoRelax() {
     document.querySelector('#bienvenida').classList.remove('visible');
     iniciar();
 }
-
-//iniciar();
-
-/* document.querySelectorAll('.reiniciar').forEach(function (elemento) {
-    elemento.addEventListener('click', iniciar);
-});
-
-document.querySelector('#subir').addEventListener('click', cargaNuevoNivel) */

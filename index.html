@@ -14,20 +14,20 @@
     <div id="bienvenida" class="bienvenida">
         <h1>Hola!!! 👋 Chamo</h1>
         <div class="bienvanida-botones">
-            <button type="submit" id="juego-normal">Quiero Jugar!!!</button>
-            <button type="submit" id="juego-relax">Modo Relax!!!</button>
+            <button type="submit" class="juego-normal">Quiero Jugar!!! <br> (con tiempo)</button>
+            <button type="submit" class="juego-relax">Elige Nivel <br> (sin tiempo)</button>
         </div>
     </div>
 
     <header class="cabecera">
         <div class='cabecera-titulo'>
-            <h1>Juego de Memoria</h1>
+            <h1>Juego de Memoria by Gibson</h1>
         </div>
 
         <div class="cabecera-info">
             <div class="contador">
                 <div class="contador-item">
-                    <h4 class="cabecera-titulo">Movimientos:</h4>
+                    <h4 class="cabecera-subtitulo">Movimientos</h4>
                     <div class="cabecera-num">
                         <span id="mov">00</span> /
                         <span id="mov-total">20</span>
@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div id="cronometro" class="contador-item">
-                <h4 class="cabecera-titulo">Tiempo:</h4>
+                <h4 class="cabecera-subtitulo">Tiempo</h4>
                 <div class="cabecera-num">
                     <span id="minutos">00</span> :
                     <span id="segundos">00</span>
@@ -44,7 +44,7 @@
             </did>
 
             <div class="nivel">
-                <h4 class="cabecera-titulo">Nivel</h4>
+                <h4 class="cabecera-subtitulo">Nivel</h4>
                 <div class="cabecera-num">
                     <span id="nivel">01</span>
                 </div>
@@ -95,6 +95,14 @@
     <div class="selecciona-nivel">
         <button id="cierra-niveles" class="cierra-niveles">&times;</button>
         <ul></ul>
+
+        <div>
+            <ul>
+                <li><button class="juego-normal"> Jugar con tiempo</button></li>
+                <li><button class="juego-relax"> Jugar sin tiempo</button></li>
+            </ul>
+        </div>
+
     </div>
 
     <audio src="sonidos/acierto.mp3" class="sonido" id="sonido-acierto" preload="auto" controls></audio>
@@ -114,7 +122,7 @@
     <script src="js/game-over.js"></script>
     <script src="js/cambia-nivel.js"></script>
     <script src="js/menu-niveles.js"></script>
-    <script src="js/iniciar.js"></script>
+    <script src="js/iniciar-juego.js"></script>
     <script src="js/comienza-juego.js"></script>
 
 

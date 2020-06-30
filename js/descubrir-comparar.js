@@ -10,6 +10,7 @@ function descubrir() {
     }
 
     this.classList.add("descubierta");
+
     document
         .querySelector("#sonido-carta")
         .cloneNode()
@@ -21,10 +22,13 @@ function descubrir() {
     }
 
     comparar(descubiertas);
+
     actualizaContador();
+
     tarjetasPendientes = document.querySelectorAll(".tarjeta:not(.acertada)");
     if (tarjetasPendientes.length === 0) {
         setTimeout(finalizar, 1000);
+        iniciaCronometro(0, true)
     }
 }
 

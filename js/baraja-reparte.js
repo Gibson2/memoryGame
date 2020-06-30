@@ -11,7 +11,6 @@ function barajaTarjeta(lasTarjetas) {
 
 
 function reparteTarjetas(lasTarjetas) {
-    //evt.preventDefault();
 
     var mesa = document.querySelector('#mesa');
     var tarjetaBarajadas = barajaTarjeta(lasTarjetas);

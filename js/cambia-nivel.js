@@ -11,6 +11,13 @@ function actualizaNivel() {
     document.querySelector('#nivel').innerText = nivelTexto;
 }
 
+function cambiaNivel() {
+    var nivel = parseInt(this.dataset.nivel);
+    nivelActual = nivel;
+    actualizaNivel();
+    iniciar();
+}
+
 function cargaNuevoNivel() {
     subeNivel();
     actualizaNivel();

@@ -70,21 +70,28 @@ button:focus {
 
 .cabecera-info {
     font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 0.9rem;
     text-transform: uppercase;
-    line-height: 1;
     margin: 0.5rem;
     color: var(--dark);
     display: flex;
     justify-content: space-around;
     align-items: baseline;
+    font-weight: bold;
 }
 
 .cabecera-titulo {
     font-family: var(--font-display);
     font-weight: 600;
     font-size: 0.9rem;
+    line-height: 1;
+    margin: 0.5rem;
+    color: var(--dark);
+}
+
+
+.cabecera-subtitulo {
+    font-weight: 600;
+    font-size: 1.2rem;
     line-height: 1;
     margin: 0.5rem;
     color: var(--dark);
@@ -127,7 +134,6 @@ button:focus {
 .cronometro-oculto {
     display: none;
 }
-
 
 .selecciona-nivel {
     background-color: var(--orange);

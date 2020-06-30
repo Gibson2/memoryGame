@@ -17,13 +17,6 @@ function escribeNiveles() {
     });
 }
 
-function cambiaNivel() {
-    var nivel = parseInt(this.dataset.nivel);
-    nivelActual = nivel;
-    actualizaNivel();
-    iniciar();
-}
-
 function muestraMenuNiveles(evento) {
     evento.stopPropagation();
     document.querySelector('.selecciona-nivel').classList.toggle('visible');
